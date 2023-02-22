@@ -20,7 +20,7 @@ const mondayWork = function(act) {
  }
 
  let wrapAdjective = function(style="*") {
-    return function(adj="special") {
-      return `You are ${style}${adj}${style}!`
+    return function(youAreAdj="special") {
+      return `You are ${style}${youAreAdj}${style}!`
     }
   }
