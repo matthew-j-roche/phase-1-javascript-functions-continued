@@ -1,26 +1,25 @@
-// code your solution here
-function saturdayFun(activity) {
-    if (activity === undefined) {
-    return 'This Saturday, I want to roller-skate!';}
-    else {
-         return (`This Saturday, I want to ${activity}!`);
-    }
+function saturdayFun(activity = 'roller-skate') {
+  return `This Saturday, I want to ${activity}!`
+};
+
+saturdayFun();
+
+saturdayFun('bathe my dog');
+
+const mondayWork = function (activity = 'go to the office') {
+  return `This Monday, I will ${activity}.`
 }
 
-saturdayFun()
+mondayWork();
 
-saturdayFun('bathe my dog')
+mondayWork('work from home');
 
-const mondayWork = function(act) {
-    if (act === undefined) {
-        return 'This Monday, I will go to the office.';}
-        else {
-            return (`This Monday, I will ${act}.`);
-    }
- }
-
- let wrapAdjective = function(style="*") {
-    return function(youAreAdj="special") {
-      return `You are ${style}${youAreAdj}${style}!`
-    }
+function wrapAdjective(flair = '*') {
+  return function (adjective = 'special') {
+  return `You are ${flair}${adjective}${flair}!`
   }
+}
+
+wrapAdjective('*')('a hard worker');
+
+wrapAdjective('||')('a dedicated programmer');
